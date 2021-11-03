@@ -1,0 +1,992 @@
+/*------------
+Reset
+------------*/
+@font-face {
+    font-family: Aldo;
+    src: url(../Fonts/Aldo\ PC.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style-type: none !important;
+}
+body,html{
+    width: 100%;
+    overflow-x: hidden;
+}
+/*------------
+Global
+------------*/
+.SectionTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0 45px 0;
+}
+.SectionTitle h2{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 40px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+/*------------
+Top Section
+------------*/
+#TopSection{
+    width: 100%;
+
+    position: relative;
+
+   
+    padding-top: 35px;
+
+}
+#TopSection .BackgroundImgDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: calc(100vh + 300px);
+    background-image:linear-gradient(0deg, rgb(43,44,71,0.7) -7.98%, rgb(118,81,178,0.7) 117.17%), url(../images/Rectangle\ 3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(4px);
+}
+#TopSection::before{
+    content: "";
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    backdrop-filter: blur(4px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/*------------
+    Header
+------------*/    
+header{
+    z-index: 100 !important;
+    height: 92px;
+    background-image: url(../images/Rectangle8.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    box-shadow: 0px 5px 25px rgba(85, 85, 85, 0.1);
+    
+}
+header .DekstopNav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+ 
+}
+header .DekstopNav .col-12{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-bottom: 10px;
+}
+header .DekstopNav .col-12 .left{
+    display: flex;
+    align-items: center;
+}
+header .DekstopNav .col-12 .left .logo h3{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    color: #EB54BC;
+}
+header .DekstopNav .col-12 .left .NavList{
+    margin-left: 40px;
+}
+header .DekstopNav .col-12 .left .NavList ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+header .DekstopNav .col-12 .left .NavList ul li{
+    margin: 0 13px;
+}
+header .DekstopNav .col-12 .left .NavList ul li a{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #221343;
+}
+header .DekstopNav .col-12 .right .time{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(270.36deg, #EB54BC 0.32%, #FF8DDC 99.73%);
+    box-shadow: 0px 5px 25px rgba(85, 85, 85, 0.1);
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+header .DekstopNav .col-12 .right .time p{
+    font-family: Aldo;
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+header .DekstopNav .col-12 .right .time .day{
+    margin-right: 20px;
+}
+header .DekstopNav .col-12 .right .time .hour{
+    margin-right: 20px;
+}
+header .DekstopNav .col-12 .right .time .minute{
+    margin-right: 20px;
+}
+/*------------
+TextBanner
+------------*/  
+.TextBanner{
+    margin-top: 130px;
+}
+.TextBanner .ColDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.TextBanner .ColDiv h1{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 79px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.TextBanner .ColDiv h2{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 79px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.TextBanner .ColDiv p{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 53px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #6CED9D;
+    margin: 0;
+    margin-top: 11px;
+}
+/*------------
+CardsBanner
+------------*/ 
+.CardsBanner{
+    margin-top: 85px;
+}
+.CardsBanner .col-12  .card{
+    background: transparent;
+    border: none;
+}
+.CardsBanner .col-12:nth-child(1)  .card{
+    background-image: linear-gradient(180deg, rgba(142, 88, 255, 0) 33.95%, #8E58FF 96.66%) , url(../images/Rectangle\ 6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 432px;
+    border-radius: 40px;
+
+    filter: drop-shadow(0px 5px 35px rgba(85, 85, 85, 0.1));
+    border-radius: 41px;
+}
+.CardsBanner .col-12:nth-child(2)  .card{
+    background-image: linear-gradient(180deg, rgba(167, 108, 75, 0) 33.95%, #073D70 96.66%) , url(../images/Rectangle\ 7.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 432px;
+    border-radius: 40px;
+ 
+    filter: drop-shadow(0px 5px 35px rgba(85, 85, 85, 0.1));
+    border-radius: 41px;
+}
+.CardsBanner .col-12:nth-child(3)  .card{
+    background-image: linear-gradient(180deg, rgba(88, 145, 255, 0) 33.95%, #54ADFF 96.66%) , url(../images/Rectangle\ 6\ \(1\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 432px;
+    border-radius: 40px;
+ 
+    filter: drop-shadow(0px 5px 35px rgba(85, 85, 85, 0.1));
+    border-radius: 41px;
+}
+.CardsBanner .col-12:nth-child(4)  .card{
+    background-image: linear-gradient(180deg, rgba(107, 75, 75, 0) 33.95%, #103A61 96.66%) , url(../images/Rectangle\ 6\ \(2\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 432px;
+    border-radius: 40px;
+ 
+    filter: drop-shadow(0px 5px 35px rgba(85, 85, 85, 0.1));
+    border-radius: 41px;
+}
+.CardsBanner .col-12:nth-child(2) .card{
+   margin-top:45px ;
+}
+.CardsBanner .col-12:nth-child(3) .card{
+    margin-top:71px ;
+ }
+ .CardsBanner .col-12:nth-child(4) .card{
+    margin-top:22px ;
+ }
+.CardsBanner .card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+.CardsBanner .card .TextMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.CardsBanner .card .TextMain p{
+    font-family: Aldo;
+    margin: 0;
+}
+.CardsBanner .card .TextMain .TopText h3{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 38px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.CardsBanner .card .TextMain .TopText p{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #FFFFFF;
+    margin-top: 3px;
+}
+.CardsBanner .card .TextMain .BottomText{
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+}
+.CardsBanner .card .TextMain .BottomText div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.CardsBanner .card .TextMain .BottomText div h4{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: rgba(255, 255, 255, 0.68);
+}
+.CardsBanner .card .TextMain .BottomText div{
+    margin: 0 16px;
+}
+.CardsBanner .card .TextMain .BottomText div p{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+}
+/*------------
+Features
+------------*/   
+#Features .col-6{
+    height: 100%;
+}
+#Features .col-6:nth-child(2) {
+    margin-top: 82px;
+}
+#Features .col-6:nth-child(3){
+    margin-top: 62px;
+}
+#Features .col-6:nth-child(4){
+    margin-top: 124px;
+}
+#Features .col-6:nth-child(5){
+    margin-top: 82px;
+}
+#Features .col-6:nth-child(6){
+    margin-top: 46px;
+}
+#Features .col-6:nth-child(7){
+    margin-top: 100px;
+}
+#Features .CardContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    border-radius: 40px;
+    border: 3px solid rgb(218, 160, 0);
+    height: calc(100% - 20px);
+    padding: 10px 5px;
+
+}
+#Features .CardContent img{
+    transform: translateY(-50%);
+    
+}
+#Features .CardContent h3{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 26px;
+text-align: center;
+transform: translateY(-150%);
+color: #000000;
+}
+#Features .CardContent p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+transform: translateY(-50%);
+color: #A4A4A4;
+margin-top: 17px;
+}
+/*------------
+NTF_Infos
+------------*/ 
+#NTF_Infos{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+#NTF_Infos .bg1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 229px;
+    height: 229px;
+    background: #EB54BC;
+    filter: blur(460px);
+    border-radius: 50%;
+}
+#NTF_Infos .bg2{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 229px;
+    height: 229px;
+    background: #FE9402;
+    filter: blur(460px);
+    border-radius: 50%;
+}
+#NTF_Infos .bg3{
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    width: 425px;
+    height: 425px;
+    background: #80ECFF;
+    filter: blur(460px);
+}
+#NTF_Infos .bg4{
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 425px;
+    height: 425px;
+    background: rgba(160, 73, 228, 0.87);
+    filter: blur(460px);
+}
+#NTF_Infos .BackGroundImage{
+    background-image: url(../images/Vector\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: -1;
+}
+#NTF_Infos .NFT_Marketplace{
+    padding-top:150px;
+}
+#NTF_Infos .NFT_Marketplace .left img{
+    width: 405.16px;
+    height: 442.49px;
+    transform: translate(-50px,-50px);
+}
+#NTF_Infos .NFT_Marketplace .right{
+    padding-top: 30px;
+    height: 100% !important;
+}
+#NTF_Infos .NFT_Marketplace .right h2{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 40px;
+/* identical to box height */
+margin: 0;
+padding: 0;
+
+color: #000000;
+}
+#NTF_Infos .NFT_Marketplace .right p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+
+color: #B1B1B1;
+margin: 32px 0;
+}
+#NTF_Infos .NFT_Marketplace .right a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 133px;
+    height: 35px;
+    background: linear-gradient(270.36deg, #EB54BC 0.32%, #FF8DDC 99.73%);
+    box-shadow: 0px 5px 25px rgba(85, 85, 85, 0.1);
+    border-radius: 12px;
+    padding: 0 15px;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 300ms;
+}
+#NTF_Infos .NFT_Marketplace .right a:hover{
+    padding: 0 10px;
+}
+#NTF_Infos .Rent_NFT{
+    transform: translateY(-30px);
+    max-height: 500px;
+}
+
+#NTF_Infos .Rent_NFT .SectionTitle h2{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 53px;
+/* identical to box height */
+
+text-align: center;
+
+color: #EB54BC;
+}
+#NTF_Infos .Rent_NFT .SectionTitle{
+    transform: translateY(-100px);
+}
+#NTF_Infos .Rent_NFT .left{
+    padding-left: 60px;
+    height: 100%;
+    transform: translateY(0px);
+}
+#NTF_Infos .Rent_NFT .left h2{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 40px;
+/* identical to box height */
+margin: 0;
+padding: 0;
+
+color: #000000;
+}
+#NTF_Infos .Rent_NFT .left p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+
+color: #B1B1B1;
+margin: 32px 0;
+}
+#NTF_Infos .Rent_NFT .left a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 133px;
+    height: 35px;
+    background: linear-gradient(270.36deg, #EB54BC 0.32%, #FF8DDC 99.73%);
+    box-shadow: 0px 5px 25px rgba(85, 85, 85, 0.1);
+    border-radius: 12px;
+    padding: 0 15px;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 300ms;
+}
+#NTF_Infos .Rent_NFT .left a:hover{
+    padding: 0 10px;
+}
+#NTF_Infos .Rent_NFT .right{
+    height: 100%;
+    position: relative;
+}
+#NTF_Infos .Rent_NFT .right img{
+    width: 100%;
+    height: 100%;
+    transform: translateY(-150px);
+    height: 480px;
+}
+#NTF_Infos .Rent_NFT .right::before{
+    content: "";
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    transform: translateY(-50%);
+    background: rgba(235, 84, 188, 0.08);
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+}
+/*------------
+Chances
+------------*/ 
+#Chances .SectionTitle{
+    margin-top: 0;
+}
+#Chances .CardMainCol{
+    position: relative;
+    height: 539px;
+}
+#Chances .CardMainCol:nth-child(3){
+    position: relative;
+    height: 460px;
+}
+#Chances .CardMainCol:nth-child(5){
+    position: relative;
+    height: 460px;
+}
+#Chances .CardMainCol:nth-child(2) {
+    margin-top: 90px;
+}
+#Chances .CardMainCol:nth-child(3) {
+    margin-top: 130px;
+}
+#Chances .CardMainCol:nth-child(4) {
+    margin-top: 60px;
+}
+#Chances .CardMainCol:nth-child(5) {
+    margin-top: 30px;
+}
+#Chances .CardContentJustImage{
+    position: relative;
+
+}
+#Chances .CardContentJustImage img:nth-child(1){
+    width: 100%;
+    height:100%;
+}
+#Chances .CardContentJustImage img:nth-child(2){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#Chances .CardMainCol .Shadow{
+    width: 60%;
+    height: 10px;
+    border-radius: 0px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#Chances .CardMainCol .Shadow img{
+    width: 100%;
+    height: 100%;
+}
+#Chances .CardMainCol{
+    padding-bottom: 50px;
+}
+#Chances .CardMainCol .CardContentText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 4.53097px solid #FFA800;
+    box-sizing: border-box;
+    border-radius: 22.6549px;
+    height: 100%;
+    text-align: center;
+    padding: 0 24px 0 24px;
+}
+#Chances .CardMainCol .CardContentText__Last{
+    border-color:rgba(194, 93, 255, 1);
+}
+#Chances .CardMainCol .CardContentText h3{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23.1001px;
+    line-height: 25px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+#Chances .CardMainCol .CardContentText p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #999999;
+    margin-top: 18px;
+}
+#Chances .CardMainCol .CardContentText svg{
+    transform: translate(-60px,80px);
+}
+#Chances .CardMainCol .CardContentText__Last svg path{
+    fill: rgba(194, 93, 255, 1);
+}
+/*------------
+Faq
+------------*/ 
+#Faq {
+    overflow: hidden;
+}
+#Faq .col-lg-6{
+    margin: 10px 0;
+}
+#Faq .FaqContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgba(232, 232, 232, 1);
+    padding:19px 27px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+#Faq .FaqContent.active{
+    border: none;
+}
+#Faq .FaqContent .FaqActiveBorder{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    width: 110%;
+    height: 230px;
+    visibility: hidden;
+}
+#Faq .FaqContent.active .FaqActiveBorder{
+    visibility: visible;
+}
+#Faq .FaqContent .FaqDefaultContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#Faq .FaqContent .FaqDefaultContent p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+}
+#Faq .FaqContent .FaqOpenContent{
+    margin-top: 15px;
+    display: none;
+}
+#Faq .FaqContent.active .FaqOpenContent{
+    display: block;
+}
+#Faq .FaqContent .FaqOpenContent p{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    color: #B7B7B7;
+}
+/*------------
+Team
+------------*/   
+#Team {
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 40px;
+}
+#Team  .bg1{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 325px;
+    height: 250px;
+    background: #FF7C60;
+    filter: blur(460px);
+}
+#Team  .bg2{
+    position: absolute;
+    top: 4%;
+    right: 0;
+    width: 325px;
+    height: 325px;
+    background: #FF70D3;
+    filter: blur(460px);
+    border-radius:50%;
+}
+#Team  .bg3{
+    position: absolute;
+    top: 4%;
+    left: 20%;
+    width: 229px;
+    height: 229px;
+    background: #17F197;
+    filter: blur(460px);
+    border-radius:50%;
+}
+#Team  .bg4{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 229px;
+    height: 229px;
+    background: #81B6FF;
+    filter: blur(460px);
+    border-radius:50%;
+}
+#Team .SectionTitle{
+    margin-bottom: 90px;
+}
+#Team .CardsCol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Team .CardContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 300ms;
+    padding: 15px 10px;
+    margin: 0 10px;
+    width: 225px;
+    height: 331px;
+}
+#Team .CardContent:hover{
+    background: #FFFFFF;
+    box-shadow: 0px 5px 35px rgba(85, 85, 85, 0.1);
+    border-radius: 41px;
+}
+#Team .CardContent img{
+    transform: translateY(-80px);
+}
+#Team .CardContent h3{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height */
+    transform: translateY(-40px);
+text-align: center;
+
+color: #000000;
+
+}
+#Team .CardContent p{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 18px;
+/* identical to box height */
+
+text-align: center;
+transform: translateY(-35px);
+
+color: #707070;
+margin-bottom: 26px;
+}
+#Team .CardContent svg{
+    transform: translateY(-20px);
+}
+/*------------
+Whitepapers
+------------*/  
+#Whitepapers{
+    position: relative;
+
+}
+#Whitepapers .CardsCon{
+    background-image: url(../images/Vector\ 3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+#Whitepapers .CardsCol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Whitepapers .CardContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 100px;
+}
+#Whitepapers .CardContent img{
+    width: 137.93px;
+height: 115.29px;
+transform: translateY(-30px);
+}
+#Whitepapers .CardContent p{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 26px;
+text-align: center;
+
+color: #000000;
+margin: 0;
+transform: translateY(-10px);
+}
+#Whitepapers .CardContent a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 133px;
+    height: 35px;
+    background: linear-gradient(270.36deg, #EB54BC 0.32%, #FF8DDC 99.73%);
+    box-shadow: 0px 5px 25px rgba(85, 85, 85, 0.1);
+    border-radius: 12px;
+    padding: 0 15px;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    /* identical to box height */
+
+    margin-bottom: 20px;
+    margin-top: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 300ms;
+}
+#Whitepapers .CardContent a:hover{
+    padding: 0 10px;
+}
+/*------------
+Medias
+------------*/   
+@media (max-width:992px){
+    .DekstopNav{
+        display: none !important;
+    }
+}
