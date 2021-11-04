@@ -19,3 +19,17 @@ HamburgerMenuOpenBtn.addEventListener('click' , () => {
     header.classList.toggle('active');
     TopSection.classList.toggle('active')
 })
+
+
+
+const Cards = document.querySelectorAll('.CardsBanner .card')
+const Pipop = document.getElementById('Pipop');
+const PipopCloseBtn = document.getElementById('PipopCloseBtn');
+for(let i=0;i<Cards.length;i++){
+    Cards[i].addEventListener('mousemove' , () => {
+        Pipop.classList.add('active');
+    })
+}
+PipopCloseBtn.addEventListener('click' , (e) => {
+    Pipop.classList.remove("active");
+})

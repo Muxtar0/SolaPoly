@@ -38,6 +38,246 @@ text-align: center;
 color: #000000;
 }
 /*------------
+Swiper
+------------*/
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+  
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+/*------------
+Pipop
+------------*/
+#Pipop .swiper-container-horizontal > .swiper-pagination-progressbar{
+    top: auto;
+    bottom: 20px;
+    width: 70%;
+    left: 70px;
+    
+}
+#Pipop .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+    background: white;
+}
+#Pipop .swiper-button-next::after, 
+#Pipop .swiper-button-prev::after{
+    display: none;
+}
+#Pipop > .container{
+    height: 100%;
+    position: relative;
+}
+#Pipop .swiper-button-prev{
+    left: 20px;
+        right: auto;
+        bottom: 0;
+        top: auto;
+}
+#Pipop .swiper-button-next{
+    right: auto;
+    left: 76%;
+    bottom: 0;
+    top: auto;
+}
+#Pipop .swiper-button-next p, 
+#Pipop .swiper-button-prev p{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height */
+    margin: 0;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+#Pipop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/BG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms;
+}
+#Pipop.active{
+    visibility: visible;
+    opacity: 1;
+}
+#Pipop .PipopCloseBtnDiv{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+#Pipop .PipopCloseBtnDiv button{
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+height: 58px;
+border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+box-shadow: 0px 5px 35px rgba(85, 85, 85, 0.1);
+}
+#Pipop .swiper-slide .Content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#Pipop .swiper-slide .Content .left img{
+    width: 600px;
+    height: 470px;
+}
+#Pipop .swiper-slide .Content .bgText{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 321.697px;
+line-height: 355px;
+/* identical to box height */
+
+text-align: center;
+
+color: rgba(255, 255, 255, 0.32);
+position: absolute;
+top: -2%;
+left: 50%;
+transform: translateX(-50%);
+z-index: -1;
+}
+#Pipop .swiper-slide .Content .TextMain p{
+    font-family: Aldo;
+    margin: 0;
+}
+#Pipop .swiper-slide .Content .TextMain .TopText{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+#Pipop .swiper-slide .Content .TextMain .TopText h3{
+    margin: 0;
+    padding: 0;
+    font-family: Arista Pro Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 51.6522px;
+    line-height: 44px;
+    /* identical to box height */
+    
+    text-align: right;
+    
+    color: #FFFFFF;
+}
+#Pipop .swiper-slide .Content .TextMain .TopText p{
+    font-family: Arista Pro Alternate;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 38.7391px;
+    line-height: 33px;
+    text-align: right;
+    
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+#Pipop .swiper-slide .Content .TextMain .MainText p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 27px;
+/* or 159% */
+width: 350px;
+text-align: right;
+letter-spacing: 0.02em;
+
+color: rgba(255, 255, 255, 0.69);
+margin-top: 15px;
+}
+#Pipop .swiper-slide .Content .TextMain .BottomText{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 13px;
+}
+#Pipop .swiper-slide .Content .TextMain .BottomText div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#Pipop .swiper-slide .Content .TextMain .BottomText div h4{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21.9729px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    
+    color: rgba(255, 255, 255, 0.68);
+}
+#Pipop .swiper-slide .Content .TextMain .BottomText div{
+    margin: 0 16px;
+}
+#Pipop .swiper-slide .Content .TextMain .BottomText div p{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30.2128px;
+    line-height: 33px;
+    
+    color: #FFFFFF;
+}
+#Pipop .swiper-slide .Content .TextMain .BottomText img{
+    width: 30px;
+    height: 30px;
+}
+/*------------
 Top Section
 ------------*/
 #TopSection{
@@ -52,7 +292,7 @@ Top Section
     left: 0;
     width: 100%;
     z-index: -1;
-    height: calc(100vh + 300px);
+    height: 90%;
     background-image:linear-gradient(0deg, rgb(43,44,71,0.7) -7.98%, rgb(118,81,178,0.7) 117.17%), url(../images/Rectangle\ 3.png);
     background-position: center;
     background-size: cover;
@@ -1619,10 +1859,42 @@ Medias
     #Business .container .col-12 .right img{
         margin: 0;
     }
-
+    #TopSection .BackgroundImgDiv{
+        height: calc(100vh + 300px);
+    }
     header{
         height: 70px; 
         background: none;
+    }
+ 
+    #Pipop .swiper-slide .Content{
+        overflow-y: scroll;
+        flex-direction: column ;
+    }
+    #Pipop .swiper-slide .Content .bgText{
+        font-size: 180px;
+        top: 90%;
+        transform: translate(-50%,-50%);
+    }
+    #Pipop .swiper-slide .Content .right{
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+    #Pipop .swiper-slide .Content .TextMain .TopText{
+        align-items: center;
+    }
+    #Pipop .swiper-slide .Content .TextMain .MainText p{
+        text-align: center;
+    }
+    #Pipop .swiper-slide .Content .TextMain .BottomText{
+        justify-content: center;
+    }
+    #Pipop .swiper-button-next{
+        left: 82% ;
+        bottom: 0;
+    }
+    #Pipop .mySwiper{
+        padding-bottom: 10px;
     }
 }
 @media (max-width:640px){
@@ -1729,5 +2001,27 @@ Medias
     }
     footer .FooterTopCon .col-12 > div{
         margin-top: 20px;
+    }
+    #Pipop .swiper-slide .Content .left img{
+        width: 240px;
+        height: 400px;
+    }
+    #Pipop .swiper-slide .Content .bgText{
+        font-size: 90px;
+        top:75%;
+    }
+    #Pipop .PipopCloseBtnDiv{
+        bottom: auto;
+        top: 0;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+    }
+    #Pipop .swiper-button-next{
+        left: auto;
+        right: 0;
+    }
+    #Pipop .swiper-container-horizontal > .swiper-pagination-progressbar{
+        left: 65px;
     }
 }
