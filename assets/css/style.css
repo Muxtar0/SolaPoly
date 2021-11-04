@@ -93,6 +93,10 @@ header{
 header.active{
     background: white;
     border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 header .DekstopNav {
     height: 100%;
@@ -1290,6 +1294,11 @@ Roadmap
     background-repeat: no-repeat;
     background-size: cover;
     padding: 30px 0 150px 0;
+}
+#Roadmap .CardCol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #Roadmap .MainContent{
     margin-top: 50px;
