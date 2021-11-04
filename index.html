@@ -381,6 +381,50 @@
     </section>
     <!-- Chances Section end -->
 
+    <!-- Chart start -->
+    <section id="Chart">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 left col-12">
+                    <canvas id="myChart" width="546px" height="546px" ></canvas>
+                    <div class="MiddleCenter">
+                        <h3>SOLAPOLY</h3>
+                    </div>
+                    <p class="First10">%10</p>
+                    <p class="First15">%15</p>
+                    <p class="Second15">%15</p>
+                    <p class="First20">%20</p>
+                    <p class="Second20">%20</p>
+                    <p class="First5">%5</p>
+                    <p class="Second10">%10</p>
+                    <p class="Second5">%5</p>
+                </div>
+                <div class="col-lg-6 right col-12">
+                    <div class="TopText">
+                        <h2>Tokenomics</h2>
+                    </div>
+                    <div class="TotalSupply">
+                        <p>Total Supply</p>
+                        <p>1,000,000,000</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li><p>Airdrop</p><p>12,000,000</p> <span></span></li>
+                            <li><p>Community Program</p><p>150,000,000</p> <span></span></li>
+                            <li><p>Private Sale</p><p>10,000,000</p> <span></span></li>
+                            <li><p>IDO</p><p>5,000</p> <span></span></li>
+                            <li><p>LP + ECO</p><p>550,000,000</p> <span></span></li>
+                            <li><p>Team</p><p>2,500,000</p> <span></span></li>
+                            <li><p>Mining Farm</p><p>10,0000</p> <span></span></li>
+                            <li><p>Staking Reward</p> <p>150,000,000</p> <span></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Chart end -->
+
     <!-- Faq Section start -->
     <section id="Faq">
         <div class="container">
@@ -897,6 +941,32 @@
     </footer>
     <!-- Footer end -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        const myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+
+                datasets: [{
+                    label: '# of Votes',
+                    data: [10,15,15,20,20,5,10,5],
+                    backgroundColor: [
+                        'rgba(255, 209, 92, 1)',
+                        'rgba(255, 122, 92, 1)',
+                        'rgba(20, 241, 149, 1)',
+                        'rgba(128, 236, 255, 1)',
+                        'rgba(128, 186, 255, 1)',
+                        'rgba(142, 88, 255, 1)',
+                        'rgba(255, 112, 210, 1)',
+                        'rgba(243, 167, 255, 1)',
+                    ],
+                    borderWidth: 0
+                }]
+            }
+        });
+        </script>
 </body>
 </html>

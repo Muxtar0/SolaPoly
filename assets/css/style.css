@@ -855,6 +855,195 @@ Chances
     fill: rgba(194, 93, 255, 1);
 }
 /*------------
+Chart
+------------*/ 
+#Chart{
+    padding: 100px 0;
+}
+#Chart .left{
+    position: relative;
+}
+#Chart .left .MiddleCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Chart .left .MiddleCenter h3{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 26px;
+text-align: center;
+margin: 0;
+padding: 0;
+color: #EB54BC;
+}
+#Chart .left p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 26px;
+position: absolute;
+color: #FFFFFF;
+}
+#Chart .left .First15{
+
+    right: 20%;
+    top: 35%;
+}
+#Chart .left .First10{
+
+    right: 37%;
+    top: 13%;
+}
+#Chart .left .Second15{
+
+    right: 20%;
+    top: 62%;
+}
+#Chart .left .First20{
+
+    right: 48%;
+    top: 80%;
+}
+#Chart .left .Second20{
+    right: 78%;
+    top: 60%;
+}
+#Chart .left .First5{
+    right: 78%;
+    top: 33%;
+}
+#Chart .left .Second10{
+    right: 70%;
+    top: 17%;
+}
+#Chart .left .Second5{
+    right: 54%;
+    top: 10%;
+}
+#Chart .right .TopText h2{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 40px;
+/* identical to box height */
+
+
+color: #EB54BC;
+}
+#Chart .right .TotalSupply{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+#Chart .right .TotalSupply p{
+    margin:0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 31px;
+/* identical to box height */
+
+text-align: right;
+
+color: #000000;
+}
+#Chart .right .list ul{
+    margin: 0;
+    padding: 0;
+}
+#Chart .right .list ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    margin: 9px 0;
+    position: relative;
+    padding: 0 15px;
+    border-radius: 10px;
+    transition: all 300ms;
+    overflow: hidden;
+}
+#Chart .right .list ul li:hover{
+    background: #8F58FE;
+
+}
+#Chart .right .list ul li:hover p{
+    color: white;
+}
+#Chart .right .list ul li:hover span{
+
+    transform: translateY(-50px);
+}
+#Chart .right .list ul li span{
+    height: 100%;
+    width: 5px;
+    height: 22px;
+border-radius: 25px;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+left: 0;
+transition: all 500ms;
+}
+#Chart .right .list ul li span:nth-child(1){
+    background: #FF7A5D;
+}
+#Chart .right .list ul li span:nth-child(2){
+    background: #FFCE5D;
+}
+#Chart .right .list ul li span:nth-child(3){
+    background: #F2A7FE;
+}
+#Chart .right .list ul li span:nth-child(4){
+    background: #FF70D3;
+}
+#Chart .right .list ul li span:nth-child(5){
+    background: #81B9FF;
+}
+#Chart .right .list ul li span:nth-child(6){
+    background: #81B9FF;
+}
+#Chart .right .list ul li span:nth-child(7){
+    background: #80ECFF;
+}
+#Chart .right .list ul li span:nth-child(8){
+    background: #15F196;
+}
+#Chart .right .list ul li p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 18px;
+/* identical to box height */
+
+text-align: right;
+    transition: all 300ms;
+color: #231343;
+}
+/*------------
 Faq
 ------------*/ 
 #Faq {
