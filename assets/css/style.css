@@ -42,12 +42,9 @@ Top Section
 ------------*/
 #TopSection{
     width: 100%;
-
     position: relative;
-
-   
     padding-top: 35px;
-
+    transition: all 300ms;
 }
 #TopSection .BackgroundImgDiv{
     position: absolute;
@@ -75,7 +72,9 @@ Top Section
 
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
-
+#TopSection.active{
+    padding: 0;
+}
 /*------------
     Header
 ------------*/    
@@ -88,7 +87,12 @@ header{
     background-size: cover;
     border-radius: 30px;
     box-shadow: 0px 5px 25px rgba(85, 85, 85, 0.1);
+    transition: all 600ms;
     
+}
+header.active{
+    background: white;
+    border-radius: 0;
 }
 header .DekstopNav {
     height: 100%;
@@ -168,6 +172,112 @@ header .DekstopNav .col-12 .right .time .hour{
     margin-right: 20px;
 }
 header .DekstopNav .col-12 .right .time .minute{
+    margin-right: 20px;
+}
+header .MobileNavCon{
+    height: 100%;
+}
+header .MobileNavCon .row{
+    height: 100%;
+}
+header .MobileNavCon .col-12{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+header .MobileNavCon .col-12 .logo h3{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    color: #EB54BC;
+}
+header .MobileNavCon{
+    background: white;
+    border-radius: 30px;
+    display: none;
+}
+
+
+/*------------
+MobileOpenMenu
+------------*/ 
+.MobileOpenMenu{
+    background: white;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 500ms;
+}
+.MobileOpenMenu.active{
+    width: 100%;
+}
+.MobileOpenMenu.active2{
+    top: 70px;
+}
+.MobileOpenMenu .NavList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.MobileOpenMenu .NavList ul{
+    margin: 0;
+    padding: 0;
+
+}
+.MobileOpenMenu .NavList ul li{
+    margin: 13px 0px;
+}
+.MobileOpenMenu .NavList ul li a{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #221343;
+}
+.MobileOpenMenu .time{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(270.36deg, #EB54BC 0.32%, #FF8DDC 99.73%);
+    box-shadow: 0px 5px 25px rgba(85, 85, 85, 0.1);
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+.MobileOpenMenu .time p{
+    font-family: Aldo;
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.MobileOpenMenu .time .day{
+    margin-right: 20px;
+}
+.MobileOpenMenu .time .hour{
+    margin-right: 20px;
+}
+.MobileOpenMenu .time .minute{
     margin-right: 20px;
 }
 /*------------
@@ -983,10 +1093,443 @@ transform: translateY(-10px);
     padding: 0 10px;
 }
 /*------------
+Roadmap
+------------*/   
+#Roadmap{
+    background-image: url(../images/RoadBG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0 150px 0;
+}
+#Roadmap .MainContent{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 35px 35px 35px 35px;
+}
+#Roadmap .MainContent .TextList:nth-child(1){
+    border-radius: 35px 0px 0px 35px;
+}
+#Roadmap .MainContent .TextList:last-child{
+    border-radius: 0 35px 35px 0;
+}
+#Roadmap .MainContent .TextList{
+    border: 2px solid rgba(20, 241, 149, 1);
+    min-height: 200px;
+}
+#Roadmap .MainContent .TextList:nth-child(1) .Top{
+    border-radius: 35px 0px 0px 0px;
+}
+#Roadmap .MainContent .TextList:last-child .Top{
+    border-radius: 0 35px 0px 0;
+}
+#Roadmap .MainContent .TextList .Top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EB54BC;
+    padding: 15px 0;
+
+}
+#Roadmap .MainContent .TextList .Top h3{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 19px;
+line-height: 20px;
+text-align: center;
+margin: 0;
+color: #FFFFFF;
+}
+#Roadmap .MainContent .TextList .List{
+    padding: 0 15px;
+}
+#Roadmap .MainContent .TextList .List ul{
+    margin: 0;
+    padding: 0;
+
+}
+#Roadmap .MainContent .TextList .List ul li{
+    margin: 10px 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 13px;
+/* identical to box height */
+
+
+color: #221343;
+
+}
+#Roadmap .MainContent .TextList .List ul li svg{
+    margin-right: 5px;
+    width: 14.75px;
+height: 15.51px;
+}
+#Roadmap .MainContent .TextList .List ul li svg path {
+    fill: rgba(20, 241, 149, 1);
+}
+#Roadmap .MainContent .ImageText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 200px;
+    padding: 15px 33px;
+    border: 2px solid rgba(255, 168, 0, 1)
+}
+#Roadmap .MainContent .ImageText h3{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 19px;
+line-height: 20px;
+text-align: center;
+
+color: #231343;
+margin-bottom: 20px;
+}
+/*------------
+Business
+------------*/  
+#Business{
+    margin-top: 100px;
+   min-height: 200px;
+}
+#Business .container{
+    position: relative;
+    min-height: 200px !important;
+}
+#Business .container .row{
+    min-height: 200px !important;
+}
+#Business .container .row .col-12{
+    min-height: 200px !important;
+    padding: 0 50px;
+}
+#Business .container .bgImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#Business .container .col-12{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#Business .container .col-12 .left h2{
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 62px;
+    /* identical to box height */
+    padding: 0;
+    margin: 0;
+    color: #1B7851;
+    margin-bottom:7px ;
+}
+#Business .container .col-12 .left p{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 26px;
+margin: 0;
+padding: 0;
+color: #FFFFFF;
+
+}
+#Business .container .col-12  .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#Business .container .col-12  .right img{
+    width: 262.01px;
+    height: 219px;
+    transform: translateY(-30%);
+    margin-right: 40px;
+}
+/*------------
+Footer
+------------*/ 
+footer{
+    margin-top: 80px;
+}
+footer .FooterTopCon .col-12{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+footer .FooterTopCon .logo h2{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 26px;
+
+color: #EB54BC;
+
+}
+footer .FooterTopCon  .navList h2{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #231343;
+}
+
+footer .FooterTopCon  .navList div{
+    display: flex;
+    align-items: center;
+}
+footer .FooterTopCon  .navList ul{
+    padding: 0;
+    margin: 0;
+}
+footer .FooterTopCon  .navList ul:nth-child(1){
+    margin-right: 30px;
+}
+footer .FooterTopCon  .navList ul li:not(:last-child){
+    margin-bottom: 13px;
+}
+footer .FooterTopCon  .navList ul li{
+    transition: all 300ms;
+}
+footer .FooterTopCon  .navList ul li:hover{
+    transform: translateX(5px);
+}
+footer .FooterTopCon  .navList ul li a{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 18px;
+/* identical to box height */
+
+
+color: rgba(35, 19, 67, 0.3);
+}
+
+footer .FooterTopCon .SocialMedias h2{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height */
+padding: 0;
+margin: 0;
+color: #231343;
+}
+footer .FooterTopCon .SocialMedias ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+footer .FooterTopCon .SocialMedias ul li{
+    margin-right: 10px;
+}
+footer .FooterBottomCon .col-12{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 10px 0;
+}
+footer .FooterBottomCon .col-12 p{
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 14px;
+margin: 0;
+color: #5B5B5B;
+}
+/*------------
 Medias
 ------------*/   
 @media (max-width:992px){
+    header .MobileNavCon{
+        display: block;
+    }
     .DekstopNav{
         display: none !important;
+    }
+
+    #TopSection::before{
+        bottom: auto;
+        top: 40%;
+    }
+    #NTF_Infos .BackGroundImage{
+        display: none;
+    }
+    .NFT_Marketplace .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #NTF_Infos .NFT_Marketplace .left img{
+        width: 300px;
+        height: 342px;
+    }
+    #NTF_Infos .NFT_Marketplace .right{
+        padding: 0;
+        transform: translateY(-120px);
+    }
+    #NTF_Infos .Rent_NFT .right{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    #NTF_Infos .Rent_NFT .right img{
+        transform: translateY(-120px);
+        width: auto;
+        height: auto;
+    }
+    #Whitepapers .CardsCon{
+        background-image: none;
+    }
+
+    #Whitepapers .CardContent{
+        margin: 0 40px;
+    }
+    #Roadmap .MainContent{
+        flex-wrap: wrap;
+    }
+    #Roadmap .MainContent .TextList{
+        border-radius: 0 !important;
+    }
+    #Roadmap .MainContent .TextList .Top{
+        border-radius: 0 !important;
+    }
+    #Business .container .col-12 .right img{
+        margin: 0;
+    }
+
+    header{
+        height: 70px; 
+        background: none;
+    }
+}
+@media (max-width:640px){
+    .TextBanner{
+        margin-top: 50px;
+    }
+    .TextBanner .ColDiv h1{
+        font-size: 50px;
+    }
+    .TextBanner .ColDiv h2{
+        font-size: 50px;
+    }
+    #TopSection::before{
+        top: 30%;
+    }
+    #NTF_Infos .NFT_Marketplace .right{
+        padding: 0 10px;
+    }
+    #NTF_Infos .NFT_Marketplace .left img{
+        width: 200px;
+        height: 240px;
+        transform: translate(100px , 0px);
+    }
+    #NTF_Infos .Rent_NFT .SectionTitle{
+        margin: 0;
+        margin-top: 70px;
+    }
+    #NTF_Infos .Rent_NFT .left{
+        padding: 0;
+        padding: 0 10px;
+        transform: translateY(-70px);
+    }
+    #Chances{
+        margin-top: 200px;
+    }
+    #Chances .CardContentJustImage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    #Chances .CardContentJustImage img:nth-child(1){
+        width: 80%;
+        height: 80%;
+    }
+    #Chances .CardMainCol{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #Chances .CardMainCol .CardContentText{
+        width: 80%;
+        height: 80%;
+    }
+    #Chances .CardMainCol:nth-child(2){
+        margin-top: 10px;
+    }
+    #Chances .CardMainCol:nth-child(3){
+        margin-top: 20px;
+    }
+    #Chances .CardMainCol .CardContentText svg{
+        transform: translate(-60px,50px);
+    }
+    #Faq .FaqContent.active .FaqActiveBorder{
+        display: none;
+    }
+    #Faq .FaqContent.active{
+        border: 2px solid rgba(232, 232, 232, 1);
+    }
+    #Team .CardsCol{
+        flex-direction: column;
+    }
+    #Team .CardContent{
+        margin-top: 50px;
+    }
+    #Whitepapers .CardsCol{
+        flex-direction: column;
+    }
+    #Whitepapers .CardContent{
+        margin: 50px 0;
+    }
+    #Business .container .row .col-12{
+        flex-direction: column;
+    }
+    #Business .container .col-12 .right img{
+        transform: translate(0);
+        
+    }
+    #Business .container .bgImg{
+        display: none;
+    }
+    #Business .container{
+        background:#39EFA3 ;
+    }
+    #Business .container .row .col-12{
+        padding: 30px 10px;
+    }
+    #Business .container .row .col-12 .right {
+        margin-top: 30px;
+    }
+    footer .FooterTopCon .col-12{
+        flex-direction: column;
+    }
+    footer .FooterTopCon .col-12 > div{
+        margin-top: 20px;
     }
 }
