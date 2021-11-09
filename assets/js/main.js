@@ -1,8 +1,19 @@
 const FaqContent = document.querySelectorAll('.FaqContent');
-
+const TimelInes = document.querySelectorAll('.TimeLine');
+let index = 0;
 for(let i = 0 ; i < FaqContent.length ; i++){
     FaqContent[i].addEventListener('click' , () => {
-        FaqContent[i].classList.toggle('active')
+        for(let i = 0 ; i < TimelInes.length ; i++){
+            TimelInes[i].classList.remove('active');
+        }
+        if(index == i){
+            FaqContent[index].classList.remove('active');
+        }
+
+        FaqContent[i].classList.toggle('active');
+        FaqContent[index].classList.remove('active')
+        TimelInes[i].classList.add('active')
+        index = i;
     })
 }
 
@@ -26,7 +37,7 @@ const Cards = document.querySelectorAll('.CardsBanner .card')
 const Pipop = document.getElementById('Pipop');
 const PipopCloseBtn = document.getElementById('PipopCloseBtn');
 for(let i=0;i<Cards.length;i++){
-    Cards[i].addEventListener('mousemove' , () => {
+    Cards[i].addEventListener('click' , () => {
         Pipop.classList.add('active');
     })
 }

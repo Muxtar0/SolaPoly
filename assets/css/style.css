@@ -174,7 +174,7 @@ box-shadow: 0px 5px 35px rgba(85, 85, 85, 0.1);
     font-family: Aldo;
 font-style: normal;
 font-weight: 600;
-font-size: 321.697px;
+font-size: 280px;
 line-height: 355px;
 /* identical to box height */
 
@@ -355,6 +355,9 @@ header .DekstopNav .col-12 .left{
     display: flex;
     align-items: center;
 }
+header .DekstopNav .col-12 .left .logo{
+    padding-left: 15px;
+}
 header .DekstopNav .col-12 .left .logo h3{
     font-family: Aldo;
     font-style: normal;
@@ -381,7 +384,7 @@ header .DekstopNav .col-12 .left .NavList ul li a{
     font-family: Aldo;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 18px;
     /* identical to box height */
 
@@ -638,6 +641,7 @@ CardsBanner
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 20px;
+    height: 430px;
 }
 .CardsBanner .card .TextMain{
     display: flex;
@@ -712,25 +716,32 @@ CardsBanner
 /*------------
 Features
 ------------*/   
+#Features .SectionTitle{
+    margin-top: 80px;
+    margin-bottom: 0;
+}
 #Features .col-6{
     height: 100%;
 }
-#Features .col-6:nth-child(2) {
+#Features .col-6 > img{
+    margin-top: 20px;
+}
+#Features .col-6:nth-child(2) > div {
     margin-top: 82px;
 }
-#Features .col-6:nth-child(3){
+#Features .col-6:nth-child(3) > div{
     margin-top: 62px;
 }
-#Features .col-6:nth-child(4){
+#Features .col-6:nth-child(4) > div{
     margin-top: 124px;
 }
-#Features .col-6:nth-child(5){
+#Features .col-6:nth-child(5) > div{
     margin-top: 82px;
 }
-#Features .col-6:nth-child(6){
+#Features .col-6:nth-child(6) > div{
     margin-top: 46px;
 }
-#Features .col-6:nth-child(7){
+#Features .col-6:nth-child(7) > div{
     margin-top: 100px;
 }
 #Features .CardContent{
@@ -741,26 +752,76 @@ Features
     position: relative;
     text-align: center;
     border-radius: 40px;
-    border: 3px solid rgb(218, 160, 0);
+    border: 1px solid gray;
     height: calc(100% - 20px);
-    padding: 10px 5px;
+    padding: 2px;
+    position: relative;
 
 }
+#Features .CardContent > div{
+    background: white;
+    border-radius: 40px;
+    transform: translate(-1px,-1px);
+    padding: 5px;
+}
+#Features .CardContent:before {
+    content: "";
+    position: absolute;
+    width: 102.6%;
+    height: 101.3%;
+    top: -3px;
+    left: -3px;
+    border-radius: 40px;
+    z-index: -1;
+    background-image: linear-gradient(130deg, #eb3fa9 0%, #395ff6 50%, #eb3fa9 100%);
+}
 #Features .CardContent img{
-    transform: translateY(-50%);
-    
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#Features .col-6:nth-child(2) .CardContent img{
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#Features .col-6:nth-child(4) .CardContent img{
+    position: absolute;
+    top: -45%;
+    left: 50%;
+    transform: translateX(-55%);
+}
+#Features .col-6:nth-child(5) .CardContent img{
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-55%);
+}
+#Features .col-6:nth-child(6) .CardContent img{
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-55%);
+}
+#Features .col-6:nth-child(7) .CardContent img{
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-55%);
 }
 #Features .CardContent h3{
     margin: 0;
     padding: 0;
     font-family: Aldo;
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 26px;
-text-align: center;
-transform: translateY(-150%);
-color: #000000;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 70px;
+    color: #000000;
 }
 #Features .CardContent p{
     margin: 0;
@@ -771,9 +832,10 @@ font-weight: 600;
 font-size: 18px;
 line-height: 20px;
 text-align: center;
-transform: translateY(-50%);
+
 color: #A4A4A4;
 margin-top: 17px;
+margin-bottom: 20px;
 }
 /*------------
 NTF_Infos
@@ -840,11 +902,17 @@ NTF_Infos
 #NTF_Infos .NFT_Marketplace .left img{
     width: 405.16px;
     height: 442.49px;
-    transform: translate(-50px,-50px);
+    transform: translate(-110px,-50px);
 }
 #NTF_Infos .NFT_Marketplace .right{
     padding-top: 30px;
     height: 100% !important;
+    position: relative;
+}
+#NTF_Infos .NFT_Marketplace .right > img{
+    position: absolute;
+    top: -30%;
+    right: 5%;
 }
 #NTF_Infos .NFT_Marketplace .right h2{
     font-family: Aldo;
@@ -892,9 +960,7 @@ margin: 32px 0;
     cursor: pointer;
     transition: all 300ms;
 }
-#NTF_Infos .NFT_Marketplace .right a:hover{
-    padding: 0 10px;
-}
+
 #NTF_Infos .Rent_NFT{
     transform: translateY(-30px);
     max-height: 500px;
@@ -966,9 +1032,7 @@ margin: 32px 0;
     cursor: pointer;
     transition: all 300ms;
 }
-#NTF_Infos .Rent_NFT .left a:hover{
-    padding: 0 10px;
-}
+
 #NTF_Infos .Rent_NFT .right{
     height: 100%;
     position: relative;
@@ -1020,9 +1084,81 @@ Chances
 #Chances .CardMainCol:nth-child(5) {
     margin-top: 30px;
 }
+#Chances  .col-12{
+    position: relative;
+}
+#Chances  .CardMainColJustImage{
+    perspective:2000px;
+    overflow: hidden;
+}
+#Chances  .CardMainColJustText{
+    perspective:2000px;
+    overflow: hidden;
+}
 #Chances .CardContentJustImage{
     position: relative;
+    transition: all 800ms;
+    z-index: 1000;
+    
+}
+#Chances  .CardMainColJustImage .CardContentText{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    
+    transition: all 700ms;
+    width: 90%;
+    height: 73% !important;
+    z-index: 1;
+    transform: rotateY(-180deg);
+    transform-origin: right;
+}
+#Chances  .CardMainColJustText .CardContentJustImage{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    transform: rotateY(-180deg);
+    transform-origin: right;
 
+    width: 90%;
+    height: 89% !important;
+    z-index: -1;
+}
+#Chances  .CardMainColJustImage .CardContentText svg{
+    transform: translate(-60px,73px) !important;
+}
+#Chances  .CardMainColJustImage .CardContentJustImage{
+    transform-origin: left;
+}
+#Chances  .CardMainColJustText .CardContentText{
+    transform-origin: left;
+    transition: all 800ms;
+    z-index: 100;
+    background: white;
+}
+#Chances  .CardMainColJustImage:hover .CardContentJustImage{
+    overflow: hidden;
+    
+    transform: rotateY(180deg);
+    visibility: hidden;
+    opacity: 0;
+    
+}
+#Chances  .CardMainColJustImage:hover .CardContentText{
+    transform: rotateY(0);
+    left: 5%;
+}
+#Chances  .CardMainColJustText:hover .CardContentJustImage{
+    transform: rotateY(0);
+    left: 5%;
+}
+#Chances  .CardMainColJustText:hover .CardContentText{
+    overflow: hidden;
+    
+    transform: rotateY(180deg);
+    visibility: hidden;
+    opacity: 0;
+    
 }
 #Chances .CardContentJustImage img:nth-child(1){
     width: 100%;
@@ -1057,7 +1193,7 @@ Chances
     flex-direction: column;
     border: 4.53097px solid #FFA800;
     box-sizing: border-box;
-    border-radius: 22.6549px;
+    border-radius: 30px;
     height: 100%;
     text-align: center;
     padding: 0 24px 0 24px;
@@ -1106,6 +1242,7 @@ Chart
 }
 #Chart .left{
     position: relative;
+    padding: 0 20px ;
 }
 #Chart .left .MiddleCenter{
     position: absolute;
@@ -1168,7 +1305,7 @@ color: #FFFFFF;
 }
 #Chart .left .First5{
     right: 78%;
-    top: 33%;
+    top: 31%;
 }
 #Chart .left .Second10{
     right: 70%;
@@ -1249,28 +1386,28 @@ transform: translateY(-50%);
 left: 0;
 transition: all 500ms;
 }
-#Chart .right .list ul li span:nth-child(1){
+#Chart .right .list ul li:nth-child(1) span{
     background: #FF7A5D;
 }
-#Chart .right .list ul li span:nth-child(2){
+#Chart .right .list ul li:nth-child(2) span{
     background: #FFCE5D;
 }
-#Chart .right .list ul li span:nth-child(3){
+#Chart .right .list ul li:nth-child(3) span{
     background: #F2A7FE;
 }
-#Chart .right .list ul li span:nth-child(4){
+#Chart .right .list ul li:nth-child(4) span{
     background: #FF70D3;
 }
-#Chart .right .list ul li span:nth-child(5){
+#Chart .right .list ul li:nth-child(5) span{
     background: #81B9FF;
 }
-#Chart .right .list ul li span:nth-child(6){
+#Chart .right .list ul li:nth-child(6) span{
     background: #81B9FF;
 }
-#Chart .right .list ul li span:nth-child(7){
+#Chart .right .list ul li:nth-child(7) span{
     background: #80ECFF;
 }
-#Chart .right .list ul li span:nth-child(8){
+#Chart .right .list ul li:nth-child(8) span{
     background: #15F196;
 }
 #Chart .right .list ul li p{
@@ -1295,30 +1432,106 @@ Faq
 }
 #Faq .col-lg-6{
     margin: 10px 0;
+    display: flex;
 }
 #Faq .FaqContent{
     display: flex;
     justify-content: center;
     flex-direction: column;
     border: 2px solid rgba(232, 232, 232, 1);
-    padding:19px 27px;
+    padding: 2px;
     border-radius: 20px;
     position: relative;
     cursor: pointer;
+    width: 100%;
+    
+}
+#Faq .FaqContent > .ContentMainDiv{
+    padding:19px 27px;
+    border-radius: 20px;
+    background: white;
+}
+#Faq .FaqContent .TimeLine{
+    position: absolute;
+    top: -50%;
+    right: -2.5%;
+    width: 3px;
+    height: 80%;
+    background-image: linear-gradient(130deg, #eb3fa9 0%, #395ff6 50%, #eb3fa9 100%);
+    visibility: hidden;
+}
+#Faq .col-12:nth-child(odd) .FaqContent .TimeLine{
+    right: auto;
+    left: -2.5%;
+}
+#Faq .col-12:nth-child(5) .FaqContent .TimeLine{
+    top: -120%;
+    height: 150%;
+}
+#Faq .col-12:nth-child(4) .FaqContent .TimeLine{
+    top: -120%;
+    height: 150%;
+}
+#Faq .col-12:nth-child(7) .FaqContent .TimeLine{
+    height: 220%;
+    top: -190%;
+}
+#Faq .col-12:nth-child(6) .FaqContent .TimeLine{
+    height: 220%;
+    top: -190%;
+}
+#Faq .col-12:nth-child(8) .FaqContent .TimeLine{
+    height: 300%;
+    top: -270%;
+}
+#Faq .col-12:nth-child(9) .FaqContent .TimeLine{
+    height: 300%;
+    top: -270%;
+}
+#Faq .col-12:nth-child(10) .FaqContent .TimeLine{
+    top: -350%;
+    height: 380%;
+}
+#Faq .col-12:nth-child(11) .FaqContent .TimeLine{
+    top: -350%;
+    height: 380%;
+}
+#Faq .FaqContent.active .TimeLine.active{
+
+    visibility: visible;
+}
+#Faq .FaqContent .rightArrow{
+    position: absolute;
+    top: 30%;
+    right: -2.5%;
+    width: 15px;
+    height: 3px;
+    visibility: hidden;
+    background-image: linear-gradient(130deg, #eb3fa9 0%, #395ff6 50%, #eb3fa9 100%);
+}
+#Faq .col-12:nth-child(odd) .FaqContent .rightArrow{
+    right: auto;
+    left: -2.5%;
+}
+#Faq .FaqContent.active .rightArrow{
+    visibility: visible;
 }
 #Faq .FaqContent.active{
     border: none;
 }
-#Faq .FaqContent .FaqActiveBorder{
+#Faq .FaqContent::before{
+    content: "";
     position: absolute;
-    top: -100%;
+    top: 0%;
     left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
-    width: 110%;
-    height: 230px;
+    background-image: linear-gradient(130deg, #eb3fa9 0%, #395ff6 50%, #eb3fa9 100%);
+    border-radius: 20px;
     visibility: hidden;
 }
-#Faq .FaqContent.active .FaqActiveBorder{
+#Faq .FaqContent.active::before{
     visibility: visible;
 }
 #Faq .FaqContent .FaqDefaultContent{
@@ -1335,12 +1548,21 @@ Faq
     font-size: 18px;
     line-height: 20px;
 }
+#Faq .FaqContent .FaqDefaultContent svg{
+    transition: all 700ms;
+}
+#Faq .FaqContent.active .FaqDefaultContent svg{
+    transform: rotate(180deg);
+}
 #Faq .FaqContent .FaqOpenContent{
     margin-top: 15px;
     display: none;
+
+
 }
 #Faq .FaqContent.active .FaqOpenContent{
     display: block;
+ 
 }
 #Faq .FaqContent .FaqOpenContent p{
     font-family: Aldo;
@@ -1351,6 +1573,11 @@ Faq
     margin: 0;
     padding: 0;
     color: #B7B7B7;
+    transition: all 800ms;
+    transform: translateY(-50px);
+}
+#Faq .FaqContent.active .FaqOpenContent p{
+    transform: translateY(0px);
 }
 /*------------
 Team
@@ -1474,6 +1701,22 @@ Whitepapers
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+#Whitepapers .CardsCol .leftArrow{
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#Whitepapers .CardsCol .rightArrow{
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#Whitepapers .CardsCol .rightArrow svg{
+    transform: rotate(-180deg);
 }
 #Whitepapers .CardContent{
     display: flex;
@@ -1590,7 +1833,7 @@ color: #FFFFFF;
 
 }
 #Roadmap .MainContent .TextList .List ul li{
-    margin: 10px 0;
+    margin: 15px 0;
     font-family: Aldo;
 font-style: normal;
 font-weight: 600;
@@ -1825,6 +2068,7 @@ Medias
     #NTF_Infos .NFT_Marketplace .left img{
         width: 300px;
         height: 342px;
+        transform: translate(0px,-20px);
     }
     #NTF_Infos .NFT_Marketplace .right{
         padding: 0;
@@ -1896,6 +2140,12 @@ Medias
     #Pipop .mySwiper{
         padding-bottom: 10px;
     }
+    #Faq .TimeLine{
+        display: none !important;
+    }
+    #Faq .rightArrow{
+        display: none !important;
+    }
 }
 @media (max-width:640px){
     .TextBanner{
@@ -1926,6 +2176,9 @@ Medias
         padding: 0;
         padding: 0 10px;
         transform: translateY(-70px);
+    }
+    #NTF_Infos .NFT_Marketplace .right > img{
+        display: none;
     }
     #Chances{
         margin-top: 200px;
