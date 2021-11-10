@@ -34,13 +34,19 @@ HamburgerMenuOpenBtn.addEventListener('click' , () => {
 
 
 const Cards = document.querySelectorAll('.CardsBanner .card')
-const Pipop = document.getElementById('Pipop');
-const PipopCloseBtn = document.getElementById('PipopCloseBtn');
+const swiperSlides = document.querySelectorAll('.swiper-slide-Pipop')
+const Pipop = document.querySelectorAll('.Pipop');
+const PipopCloseBtn = document.querySelectorAll('.PipopCloseBtn');
+
 for(let i=0;i<Cards.length;i++){
     Cards[i].addEventListener('click' , () => {
-        Pipop.classList.add('active');
+        Pipop[i].classList.add('active');
     })
 }
-PipopCloseBtn.addEventListener('click' , (e) => {
-    Pipop.classList.remove("active");
-})
+for(let i=0;i<PipopCloseBtn.length;i++){
+    PipopCloseBtn[i].addEventListener('click' , (e) => {
+        for(let i=0;i<Cards.length;i++){
+            Pipop[i].classList.remove("active");
+        }
+    })
+}
