@@ -581,6 +581,166 @@ TextBanner
     margin-top: 11px;
 }
 /*------------
+About Section
+------------*/ 
+#AboutSection{
+    margin-top: 60px;
+}
+#AboutSection .TopContainer{
+    position: relative;
+    padding:29px 0px 29px 0px ;
+}
+#AboutSection .TopContainer .BgImage{
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 90%;
+    z-index: -1;
+}
+#AboutSection .TopContainer .BgImage img{
+    width: 100%;
+    height: 100%;
+}
+#AboutSection .TopContainer .LeftCol img{
+    height: 196px;
+    border-radius: 30px;
+    max-width: 310px;
+}
+#AboutSection .TopContainer .RightCol{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+#AboutSection .TopContainer .RightCol h2{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    /* identical to box height */
+
+    text-align: right;
+
+    color: #FFFFFF;
+}
+#AboutSection .TopContainer .RightCol p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+text-align: right;
+max-width: 700px;
+color: rgba(255, 255, 255, 0.7);
+
+}
+#AboutSection .BottomContainer{
+    position: relative;
+    padding:15px 0px 15px 0px ;
+}
+#AboutSection .BottomContainer .BgImage{
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 96%;
+    z-index: -1;
+}
+#AboutSection .BottomContainer .row{
+    margin-top: 30px;
+}
+#AboutSection .BottomContainer .BgImage img{
+    width: 100%;
+    height: 100%;
+}
+#AboutSection .BottomContainer .RightCol .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#AboutSection .BottomContainer .RightCol img:not(.shadow){
+    height: 196px;
+    border-radius: 30px;
+    max-width: 310px;
+}
+#AboutSection .BottomContainer .RightCol .shadow{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+    max-width: 310px;
+}
+#AboutSection .BottomContainer .RightCol .Text{
+    max-width: 310px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px;
+}
+#AboutSection .BottomContainer .RightCol .Text p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 35px;
+
+    color: #FFFFFF;
+}
+#AboutSection .BottomContainer .RightCol .Text button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+#AboutSection .BottomContainer  .LeftCol{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+#AboutSection  .BottomContainer  .LeftCol h2{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+}
+#AboutSection  .BottomContainer  .LeftCol p{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 700px;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+/*------------
 CardsBanner
 ------------*/ 
 .CardsBanner{
@@ -2174,6 +2334,45 @@ Medias
     }
     #Faq .rightArrow{
         display: none !important;
+    }
+    #AboutSection .TopContainer .BgImage{
+        display: none;
+    }
+
+    #AboutSection .TopContainer{
+        background: #FF75E1;
+    }
+    #AboutSection .TopContainer .RightCol{
+        align-items: center;
+        margin-top: 15px;
+    }
+    #AboutSection .TopContainer .RightCol p,
+    #AboutSection .TopContainer .RightCol h2{
+        text-align: center !important;
+        padding: 0 5px;
+    }
+    #AboutSection .BottomContainer .BgImage{
+        display: none;
+    }
+    #AboutSection .BottomContainer{
+        background: #64C7FF;
+    }
+    #AboutSection .BottomContainer .LeftCol{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    #AboutSection .BottomContainer .LeftCol .Content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #AboutSection .BottomContainer .LeftCol p,
+    #AboutSection .BottomContainer .LeftCol h2{
+        text-align: center !important;
+        padding: 0 5px;
     }
 }
 @media (max-width:640px){
