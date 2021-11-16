@@ -327,16 +327,26 @@ Top Section
 ------------*/    
 header{
     z-index: 100 !important;
-    height: 92px;
-    background-image: url(../images/Rectangle8.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height:110px;
+
     border-radius: 30px;
     box-shadow: 0px 5px 25px rgba(85, 85, 85, 0.1);
     transition: all 600ms;
-    
+    position: relative;
 }
+header .BgImage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+}
+header .BgImage img{
+    width: 100%;
+    height: 100%;
+}
+
 header.active{
     background: white;
     border-radius: 0;
@@ -349,7 +359,7 @@ header .DekstopNav {
     height: 100%;
     display: flex;
     align-items: center;
- 
+    display: none;
 }
 header .DekstopNav .col-12{
     display: flex;
@@ -426,6 +436,75 @@ header .DekstopNav .col-12 .right .time .hour{
     margin-right: 20px;
 }
 header .DekstopNav .col-12 .right .time .minute{
+    margin-right: 20px;
+}
+header  .DekstopNav2{
+    padding-top: 12px;
+}
+header  .DekstopNav2 > .col-12
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header  .DekstopNav2 .NavList ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    
+}
+header  .DekstopNav2 .NavList ul li{
+    margin: 0 20px;
+}
+header  .DekstopNav2 .NavList ul li a{
+    margin: 0;
+    padding: 0;
+    font-family: Aldo;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 18px;
+/* identical to box height */
+
+
+color: #221343;
+}
+header .DekstopNav2  .right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+header .DekstopNav2  .right .time{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(270.36deg, #EB54BC 0.32%, #FF8DDC 99.73%);
+    box-shadow: 0px 5px 25px rgba(85, 85, 85, 0.1);
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+header .DekstopNav2  .right .time p{
+    font-family: Aldo;
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+header .DekstopNav2  .right .time .day{
+    margin-right: 20px;
+}
+header .DekstopNav2  .right .time .hour{
+    margin-right: 20px;
+}
+header .DekstopNav2  .right .time .minute{
     margin-right: 20px;
 }
 header .MobileNavCon{
@@ -2213,14 +2292,21 @@ color: #5B5B5B;
 /*------------
 Medias
 ------------*/   
+
+
 @media (max-width:992px){
     header .MobileNavCon{
         display: block;
     }
+    header .BgImage{
+        display: none;
+    }
     .DekstopNav{
         display: none !important;
     }
-
+    .DekstopNav2{
+        display: none !important;
+    }
     #TopSection::before{
         bottom: auto;
         top: 40%;
